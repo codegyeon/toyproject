@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width,height=device-height ,initial-scale=1.0">
 
     <title>팬명록</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <style>
         .myimg {
             width: 100%;
@@ -31,9 +32,10 @@
             position: fixed;
             border: black 1px solid;
         }
-        .postbox{
-            width: 1133px;
-            height: 100%;
+        .post_box{
+            max-width: 1133px;
+            width: 100%;
+            height: 1000px;
 
             float: right;
             display: block;
@@ -49,7 +51,36 @@
 
             height: 50px;
         }
+        .ul_1{
+            margin-top: 30px;
+        }
+        .ul_1 > li{
+            margin-top: 50px;
+        }
+        .list_button{
+            position: fixed;
+            bottom: 60px;
+            left: 55px;
+        }
+        .post_table{
+            width: 800px;
+
+            margin: 50px auto 3px;
+
+            border-bottom: royalblue 3px solid;
+        }
+        .post_table1{
+            width: 800px;
+            margin: 0px auto 3px;
+            border-bottom: royalblue 3px solid;
+        }
+        .post_title > h1{
+            margin-left: 470px;
+            margin-top: 70px;
+        }
     </style>
+
+
 </head>
 <body>
 
@@ -64,25 +95,50 @@
             <div class="UserInterface">
                 "회원정보" 님, 환영합니다.
             </div>
-            <ul>
-                <li>전체글</li>
-                <li>응원하기</li>
-                <li>활동로그</li>
-            </ul>
+
+            <!-- 목록 내용 -->
+            <div>
+                <ul class="ul_1">
+                    <li>전체글</li>
+                    <li>응원하기</li>
+                    <li>활동로그</li>
+                </ul>
+            </div>
+
+            <!-- 로그인, 로그아웃, 회원가입  -->
+            <div class="list_button">
+                <button>로그인</button>
+                <button>회원가입</button>
+                <button>로그아웃</button>
+            </div>
+
         </div>
 
         <!-- 게시글 -->
-        <div class="postbox">
+        <div class="post_box">
 
                 <!-- 상단 이미지 -->
                 <div class="myimg" onclick="메인 페이지">
                     <h1>치즈(CHEEZE)팬명록</h1>
                 </div>
 
-                <!-- 본문 -->
-                <div>
-
+                <!-- 본문 제목 -->
+                <div class="post_title">
+                    <h1>"목록 제목"</h1>
                 </div>
+
+                <!-- 본문 내용 -->
+                <div class="post_table">
+                    <span>글쓴이</span>
+                    <span style="margin-left: 70px">내용</span>
+                    <span style="margin-left: 580px">게시일자</span>
+                </div>
+                <div class="post_table1">
+                    <span style="border-right: royalblue 3px solid">글쓴이</span>
+                    <span style="margin-left: 70px;">내용</span>
+                    <span style="margin-left: 580px">게시일자</span>
+                </div>
+
         </div>
 
     </div>
