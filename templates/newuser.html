@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <!-- meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <!-- jquery, ajax -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- title -->
+    <title>회원가입</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="../static/css/newuer.css">
+
+    <!-- javascript -->
+    <script src="../static/js/newuser.js"></script>
+
+    <!--  서버 연결을 위한 코드 (css) -->
+    <!--<link rel="stylesheet" href="{{url_for('static', filename='css/mystyle.css')}}">-->
+</head>
+
+<body>
+<div class="titleeffect">
+
+    <!-- 타이틀 제목 -->
+    <h1><p class="regular">회원가입</p></h1>
+
+</div>
+
+<!-- 회원가입 박스 -->
+    <form>
+        <div class="main_box">
+
+            <!-- 이름 -->
+            <div>
+                <h4 class="namevalue">이름</h4>
+                <input class="input_box" placeholder="이름">
+
+            </div>
+
+            <!-- 아이디 -->
+            <div>
+                <h4 class="namevalue">아이디</h4>
+                <input class="input_box" type="text" placeholder="id" id="input_id" onkeyup="input_id_value(this)">
+                <span class="font_style" id="error_id">영문과 숫자를 조합하여 최소 8자 최대 16자 까지 입력해주세요.</span>
+            </div>
+
+            <!-- 1차 비밀번호 -->
+            <div>
+                <h4 class="namevalue">1차 비밀번호</h4>
+                <input class="input_box" type="password" placeholder="비밀번호"id="input_pw1" onkeyup="input_pw_value()">
+                <span class="font_style" id="error_pw1">영문과 숫자를 조합하여 최소 8자 최대 16자 까지 입력해주세요.</span>
+            </div>
+
+            <!-- 2차 비밀번호 -->
+            <div>
+                <h4 class="namevalue">2차 비밀번호</h4>
+                <input class="input_box" type="password" placeholder="비밀번호"id="input_pw2" onkeyup="input_pw2_value()">
+                <span class="font_style" id="error_pw2">위와 일치하지 않습니다.</span>
+                <span class="font_style" id="error_pw3">위와 일치합니다.</span>
+            </div>
+
+            <!-- 닉네임 -->
+            <div >
+                <h4 class="namevalue">닉네임</h4>
+                <input class="input_box" placeholder="닉네임">
+            </div>
+
+            <!-- 회원가입 버튼 -->
+            <button class="SignUp_box" onclick="">회원가입</button>
+        </div>
+    </form>
+</body>
+</html>

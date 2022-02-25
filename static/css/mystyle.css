@@ -1,0 +1,133 @@
+
+.maintitle {
+    width: 60%;
+    height: 250px;
+
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url('https://images.unsplash.com/photo-1529669851596-ba9a5549af95?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8c25vd2JvYXJkfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60');
+    background-position: center;
+    background-size: cover;
+
+    position: center;
+    margin: auto;
+
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.mb-3 {
+    width: 300px;
+    height: auto;
+    margin: auto;
+
+}
+
+.btn-main {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-main > button {
+    margin: 10px 45px;
+}
+
+.form-label {
+    margin-top: 30px;
+}
+
+.all-box {
+    width: 350px;
+    height: auto;
+    margin: 20px auto;
+    border: black solid 1px;
+}
+.titleeffect{
+    font-style: italic;
+    position: center;
+    margin-top: 70px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.mainscreen_title {
+    font-size: 45px;
+    text-align: center;
+
+    margin:0;
+}
+.grid {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+}
+.grid > ol{
+    border-right:1px solid gray;
+    width: 100px;
+    margin: 0;
+    padding: 33px;
+}
+
+.box1 {
+    width: 180px;
+    height: 600px;
+
+    background-color: blue;
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url('https://images.unsplash.com/photo-1498146831523-fbe41acdc5ad?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8c25vd2JvYXJkfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60');
+    background-position: center;
+    background-size: cover;
+
+    position: fixed;
+    top: 100px;
+    right: 30px;
+}
+
+.box_container{
+    width: 1000px;
+    height: auto;
+    border: black 1px solid;
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+.box_title{
+    width: 999px;
+    height: 80px;
+    border-bottom: black 1px solid;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0px;
+}
+
+p {
+    font-family: 'Nanum Brush Script', cursive;
+}
+.regular {
+    font-weight: 400;
+}
+
+.list_list{
+    border-right:1px solid gray;
+    width: 160px;
+    height: auto;
+    padding-right: 33px;
+
+}
+.list_f{
+    padding-left: 20px;
+}
+
+.buttons{
+    background: transparent;
+    border: 0px;
+
+    display: inline-block;
+    margin-bottom: 50px;
+}
