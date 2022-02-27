@@ -1,16 +1,19 @@
 from flask import Flask, render_template, request, jsonify
+from flask import session, escape
 
 from pymongo import MongoClient
 
 client = MongoClient('mongodb+srv://sparta:sparta313@cluster0.44y0f.mongodb.net/Cluster0?retryWrites=true&w=majority')
 
-db = client.dbsnow
+db = client.dbch
 
 app = Flask(__name__)
-
+app.secret_key = "asdferq@-#!$d34"
 
 @app.route('/')
 def home():
+    if "username" in session:
+        return render_template('index.html')
     return render_template('index.html')
 
 @app.route('/login')
@@ -26,6 +29,7 @@ def login_try():
     name_receive = request.form['name_give']
     id_receive = request.form['id_give']
     key1_receive = request.form['key1_give']
+    nickname_receive = request.form['nickname_give']
 
     all_users = list(db.users.find({}, {'_id': False}))
 
@@ -37,6 +41,7 @@ def login_try():
         'name': name_receive,
         'id': id_receive,
         'key1': key1_receive,
+        'nickname':  nickname_receive
     }
     print(doc)
     db.users.insert_one(doc)

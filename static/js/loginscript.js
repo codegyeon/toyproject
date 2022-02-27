@@ -1,23 +1,6 @@
-function changeTilte(obj) {
-      let button1 = document.getElementById('intro1')
-      let button2 = document.getElementById('intro2')
-      let button3 = document.getElementById('intro3')
-
-      if (obj === button1) {
-
-        $("#page-title").text(`${button1.innerText}`)
-      } else if (obj === button2) {
-
-        $("#page-title").text(`${button2.innerText}`)
-      } else {
-
-        $("#page-title").text(`${button3.innerText}`)
-      }
-}
 function alert_1(){
     alert("처음 화면으로 돌아갑니다.")
     location.href='./index.html'
-
 }
 function new_account() {
     let name = $('#exampleInputEmail3').val()
@@ -72,7 +55,7 @@ function login_button(){
                     // 성공
                     alert(response['msg'])
 
-                    location.href='/login'
+                    location.href='/'
                 }
             }
         });
