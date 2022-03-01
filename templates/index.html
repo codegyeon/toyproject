@@ -17,6 +17,15 @@
 </head>
 <body>
 
+    <!--응원 남기기-->
+    <div id="che1" class="che_box1">
+        <form>
+            <a>응원하기</a>
+            <input type="text" id="cheering">
+            <button class="btn1" >닫기</button>
+            <button class="btn2" onclick="cheeringlog()">응원남기기</button>
+        </form>
+    </div>
 
     <!-- 목록과 게시글 -->
     <div class="mybox">
@@ -37,13 +46,18 @@
                 </ul>
             </div>
 
+            <!-- 응원하기 -->
+            <button class="che" id="che" onclick="click_event1()">응원하기</button>
+
             <!-- 로그인, 로그아웃, 회원가입  -->
             <div class="list_button">
-                <button onclick="login()">로그인</button>
-                <button onclick="fuck()">회원가입</button>
-                <button onclick="logout()">로그아웃</button>
-            </div>
+                <!-- 로그인이 아닐시 -->
+                <button class="" id="button1" onclick="login()">로그인</button>
+                <button class="" id="button2" onclick="newuser()">회원가입</button>
 
+                <!-- 로그인시 -->
+                <button class="" id="button3" onclick="logout()">로그아웃</button>
+            </div>
         </div>
 
         <!-- 게시글 -->

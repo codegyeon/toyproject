@@ -64,10 +64,14 @@ def web_mars_get():
     id_receive = request.form['id_give']
     key1_receive = request.form['key1_give']
     user = db.users.find_one({'id': id_receive})
+
     # 로그인 시 입력된 비밀번호라고 가정
     input_text = key1_receive
+
     # 입력된 비밀번호를 바이트 코드로 변환
     byte_input = input_text.encode('UTF-8')
+
+
     # 기존 저장된 값을 연산을 위해 hex에서 바이트로 변경
     # origin_pw = bytes.fromhex(db.users.find_one({'id': id_receive})['key1'])
     # bcrypt.checkpw(byte_input, origin_pw)
@@ -77,17 +81,38 @@ def web_mars_get():
     elif not bcrypt.checkpw(byte_input, bytes.fromhex(db.users.find_one({'id': id_receive})['key1'])):
         return jsonify({'msg': '비밀 번호 틀림'})
     else:
+
+        #세션 부여
         session['username'] = db.users.find_one({'id': id_receive})['nickname']
-        # username = session['username']
         return jsonify({'msg': '로그인'})
 
 @app.route('/logout', methods=['GET']) # POST는 필요없다.
 def logout():
     session.pop('username', None)
     return redirect('/')
-# @app.route("/movie", methods=["GET"])
-# def movie_get():
-#     movie_list = list(db.movies.find({}, {'_id': False}))
-#     return jsonify({'movies':movie_list})
+
+
+
+
+#------------- 응원 불러오기----------------
+@app.route('/list',methods=['GET'])
+def list():
+    db.users
+
+    session
+
+#---------------응원 작성
+@app.route('/cheering', methods=['POST'])
+def cheering():
+    che_receive = request.form['che_give']
+    if 'username' in session:
+        doc = {
+            'che': che_receive,
+            'nickname': session['username']
+        }
+        db.cheering.insert_one(doc)
+        return jsonify({'msg': '업로드 성공'})
+    else:
+        return jsonify({'msg':'로그인이 필요합니다. '})
 if __name__ == '__main__':
     app.run('0.0.0.0', port=5000, debug=True)

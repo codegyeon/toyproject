@@ -39,6 +39,12 @@
     bottom: 60px;
     left: 55px;
 }
+.button1{
+    display: none;
+}
+.button2{
+    display: flex;
+}
 
 
 /*--------------------------------------------------------------------------------*/
@@ -133,3 +139,67 @@
 
     background-color: gray;
 }
+/*---------------------------------*/
+.che_box{
+            position: fixed;
+            border: 1px black solid;
+            border-radius: 20px;
+
+            width: 500px;
+            height: 300px;
+
+            margin:  130px auto auto 450px;
+            display: inline;
+
+            background-color: #D8D8D8;
+        }
+        .che_box1{
+            position: fixed;
+            border: 1px black solid;
+            border-radius: 20px;
+
+            width: 500px;
+            height: 300px;
+
+            margin:  130px auto auto 450px;
+
+            display: none;
+            background-color: #D8D8D8;
+        }
+        .che_box > form > a {
+            font-size: 20px;
+            position: center;
+            color: black;
+            margin: 5px auto;
+            margin-left: 210px;
+            display: block;
+        }
+        .che_box > form >input{
+            width: 480px;
+            height: 200px;
+            margin: 5px auto;
+            display: block;
+        }
+
+        .btn1{
+            display: inline;
+            margin: 20px auto;
+            margin-left: 20px;
+        }
+        .btn2{
+            display: inline;
+            margin: 20px auto;
+            margin-left: 330px;
+        }
+        .che{
+            width: 100px;
+            height: 50px;
+
+            margin: 70px auto;
+            margin-left: 85px;
+            font-size: 20px;
+
+            border-radius: 20px;
+            background-color: #58ACFA;
+            color: white;
+        }
