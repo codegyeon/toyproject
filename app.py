@@ -15,12 +15,13 @@ app.config['JSON_AS_ASCII'] = False
 def home():
     return render_template('index.html')
 
-@app.route('/namee', methods=["GET"])
+@app.route('/name', methods=["GET"])
 def name():
     if 'username' in session:
         username = session['username']
-        return jsonify({'namer': username})
-
+        return jsonify({'name': username})
+    else:
+        return jsonify("세션기록이 없습니다.")
 
 @app.route('/login')
 def login():

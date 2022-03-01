@@ -33,15 +33,16 @@ function login(){
 function nameget() {
     $.ajax({
         type: 'GET',
-        url: '/namee',
+        url: '/name',
         data: {},
         success: function (response) {
             console.log(response)
-            let named = response['namer']
-            if (named === true) {
-                let temp = ` <a>"${named}" 님, 환영합니다.</a>`
+            let named = response['name']
+            if (named == true) {
+                let temp = `<a>"${named}" 님, 환영합니다.</a>`
                 $('#name').append(temp)
-            } else {
+             }
+            else {
                 let temp = `<a>환영합니다.</a>`
                 $('#name').append(temp)
             }
