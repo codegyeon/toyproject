@@ -1,4 +1,6 @@
-
+$(document).ready(function () {
+            nameget();
+        });
 function changetitle(obj){
     let title1 = document.getElementById('title1')
     let title2 = document.getElementById('title2')
@@ -25,3 +27,39 @@ function chagepost(){
         $("#maintitle").text(`${post3.innerText}`)
     }
 }
+function login(){
+    location.href='/login'
+}
+function nameget() {
+    $.ajax({
+        type: 'GET',
+        url: '/namee',
+        data: {},
+        success: function (response) {
+            console.log(response)
+            let named = response['namer']
+            if (named === true) {
+                let temp = ` <a>"${named}" 님, 환영합니다.</a>`
+                $('#name').append(temp)
+            } else {
+                let temp = `<a>환영합니다.</a>`
+                $('#name').append(temp)
+            }
+
+
+        }
+
+    });
+}
+function logout(){
+$.ajax({
+    type: 'GET',
+        url: '/logout',
+        data: {},
+        success: function (response) {
+        alert("로그아웃됩니다.")
+        window.location.reload()
+        }
+});
+}
+

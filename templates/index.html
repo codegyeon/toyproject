@@ -9,12 +9,11 @@
     <!-- jquery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-    <!-- css -->
-    <link rel="stylesheet" href="../static/css/style.css">
+    <!-- CSS -->
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
 
-    <!-- javascript -->
-    <script src="../static/js/csscript.js"></script>
-
+    <!-- 만약 static폴더 내부의 js폴더의 script.js 파일이라면? -->
+    <script src="{{ url_for('static', filename='js/csscript.js') }}"></script>
 </head>
 <body>
 
@@ -26,8 +25,7 @@
         <div class="listbox">
 
             <!-- 회원정보 -->
-            <div class="UserInterface">
-                "회원정보" 님, 환영합니다.
+            <div id="name" class="UserInterface">
             </div>
 
             <!-- 목록 내용 -->
@@ -41,9 +39,9 @@
 
             <!-- 로그인, 로그아웃, 회원가입  -->
             <div class="list_button">
-                <button>로그인</button>
-                <button>회원가입</button>
-                <button>로그아웃</button>
+                <button onclick="login()">로그인</button>
+                <button onclick="fuck()">회원가입</button>
+                <button onclick="logout()">로그아웃</button>
             </div>
 
         </div>

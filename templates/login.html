@@ -20,10 +20,9 @@
     <title>로그인</title>
 
     <!-- css -->
-    <link rel="stylesheet" href="../static/css/mystyle.css">
-
+    <link rel="stylesheet" href="{{url_for('static', filename='css/mystyle.css')}}">
     <!-- javascript -->
-    <script src="../static/js/javscript.js"></script>
+    <script src="{{ url_for('static', filename='js/loginscript.js') }}" > </script>
 
     <!--  서버 연결을 위한 코드 (css) -->
     <!--<link rel="stylesheet" href="{{url_for('static', filename='css/mystyle.css')}}">-->
